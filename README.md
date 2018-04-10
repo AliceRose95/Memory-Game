@@ -3,8 +3,19 @@
 
 ## Table of Contents
 
+* [Installation](#installation)
 * [Description](#description)
 * [How to play](#howtoplay)
+* [Dependencies](#dependencies)
+* [Credits](#credits)
+
+## Installation
+
+[Live page] (https://alicerose95.github.io/memory-game/)
+
+Clone link:
+
+`git clone https://github.com/AliceRose95/memory-game.git`
 
 ## Description
 
@@ -22,3 +33,12 @@ Each turn:
 
 Click on each card and try to match the symbols on each. Once you've flipped some cards, try to remember where each symbol was. If you get a match, both cards turn green.
 Try to win in under 10 moves for a perfect 3-star score!
+
+## Dependencies
+
+None
+
+## Credits
+
+Initial HTML and Style: Udacity (https://github.com/udacity/fend-project-memory-game)
+Shuffle function from (http://stackoverflow.com/a/2450976)

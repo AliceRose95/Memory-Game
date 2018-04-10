@@ -66,10 +66,14 @@ function startGame() {
   starOne.classList.add('fa-star');
   starTwo.classList.remove('fa-star-o');
   starTwo.classList.add('fa-star');
+
+  //start timer on first card click
+  cards[0].addEventListener('click', startTimer);
 }
 
 //reset timer for restart
 function timerReset() {
+  clearInterval(interval);
   timer.textContent = '00:00';
   seconds = 0; minutes = 0;
 }
@@ -149,18 +153,15 @@ function addTime() {
 
 //start the timer function
 function startTimer() {
-  if (moves == 1) {
-    seconds = 0;
+    seconds = 1;
     minutes = 0;
     addTime();
-  }
 }
 
 //record the number of moves made and start timer on first move
 function movesMade() {
   moves++;
   moveCounter.innerHTML = moves;
-  startTimer();
   starRating();
 }
 
