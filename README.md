@@ -40,6 +40,6 @@ None
 
 ## Credits
 
-Initial HTML and Style: Udacity(https://github.com/udacity/fend-project-memory-game)
+Initial HTML and Style: [Udacity](https://github.com/udacity/fend-project-memory-game)
 
-Shuffle function from StackOverflow(http://stackoverflow.com/a/2450976)
+Shuffle function from [StackOverflow](http://stackoverflow.com/a/2450976)
