@@ -4,6 +4,7 @@ const restart = document.querySelector('.restart');
 let timer = document.querySelector('.timer');
 let seconds = 0, minutes = 0;
 let interval;
+let getTimer = 0;
 let moveCounter = document.querySelector('.moves');
 let moves = 0;
 let card = document.getElementsByClassName('card');
@@ -22,11 +23,17 @@ let cards = Array.prototype.slice.call(card);
 
 //loops through all the cards and turns them on click
 for(let i = 0; i < cards.length; i++) {
-  cards[i].addEventListener('click', function() {
-    this.classList.add('open', 'show', 'noclick');
-  });
+  cards[i].addEventListener('click', openCards);
   cards[i].addEventListener('click', cardOpen);
   cards[i].addEventListener('click', congratulations);
+}
+
+//function to flip the cards, called in for loop
+function openCards() {
+  this.classList.add('open', 'show', 'noclick');
+  if(getTimer === 0) {
+    startTimer();
+  }
 }
 
 // Shuffle function from http://stackoverflow.com/a/2450976
@@ -67,15 +74,14 @@ function startGame() {
   starTwo.classList.remove('fa-star-o');
   starTwo.classList.add('fa-star');
 
-  //start timer on first card click
-  cards[0].addEventListener('click', startTimer);
 }
 
 //reset timer for restart
 function timerReset() {
   clearInterval(interval);
+  getTimer = 0;
   timer.textContent = '00:00';
-  seconds = 0; minutes = 0;
+  seconds = 1; minutes = 0;
 }
 
 //restart game on button click
@@ -145,7 +151,7 @@ function addTime() {
     timer.textContent = (minutes ? (minutes > 9 ? minutes : '0' + minutes) : '00') + ':' + (seconds > 9 ? seconds : '0' + seconds);
     seconds++;
     if (seconds >= 60) {
-        seconds = 0;
+        seconds = 1;
         minutes++;
     }
   }, 1000);
@@ -156,6 +162,7 @@ function startTimer() {
     seconds = 1;
     minutes = 0;
     addTime();
+    getTimer = true;
 }
 
 //record the number of moves made and start timer on first move
