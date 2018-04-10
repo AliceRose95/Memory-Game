@@ -11,7 +11,7 @@
 
 ## Installation
 
-[Live page] (https://alicerose95.github.io/memory-game/)
+[Live page](https://alicerose95.github.io/memory-game/)
 
 Clone link:
 
@@ -40,5 +40,6 @@ None
 
 ## Credits
 
-Initial HTML and Style: Udacity (https://github.com/udacity/fend-project-memory-game)
-Shuffle function from (http://stackoverflow.com/a/2450976)
+Initial HTML and Style: Udacity(https://github.com/udacity/fend-project-memory-game)
+
+Shuffle function from StackOverflow(http://stackoverflow.com/a/2450976)
